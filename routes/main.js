@@ -3,6 +3,7 @@ const router = express.Router()
 const Post = require('../models/Post')
 
 router.get('/', function (req, res) {
+    console.log(req.session)
     res.render('index')
 })
 
@@ -22,14 +23,6 @@ router.get('/blog-single', (req, res) => {
 
 router.get('/contact', (req, res) => {
     res.render('contact')
-})
-
-router.get('/login', (req, res) => {
-    res.render('login')
-})
-
-router.get('/register', (req, res) => {
-    res.render('register')
 })
 
 
